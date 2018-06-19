@@ -33,11 +33,11 @@ def handle_arguments():
                 debug_print("Set Base URL: " + _base_url);
 
 # sort_se=True => Sort H->L Seeders        
-def build_query(query_title, sort_se=True):
-    return _base_url + "/search/" + query_title.replace(" ", "%20") + "/0/99/0";
+def build_query(query_title, sort_se=True, page=0):
+    return _base_url + "/search/" + query_title.replace(" ", "%20") + "/" + str(page) + "/99/0";
 
-def search(query_title):
-    raw = _session.get(build_query(query_title), headers={"User-Agent":_user_agent});
+def search(query_title, pag=0):
+    raw = _session.get(build_query(query_title, page=pag), headers={"User-Agent":_user_agent});
     return raw;
 
 def soup_san(soup):
@@ -68,13 +68,26 @@ if __name__ == "__main__":
     handle_arguments();
     while True:
         _title = input("Search: ");
-        _search = search(_title);
-        rows = BeautifulSoup(_search.text).find_all("tr")[1:]
-        index = 0;
-        for row in rows:
-            dr = parse_row(row);
-            print(pretty_row(index, dr))
-            index += 1;
-        _link = input("Link: ")
-        print(parse_row(rows[int(_link)])["Magnet"])
-        webbrowser.open(parse_row(rows[int(_link)])["Magnet"])
+        found_link = False
+        pg = 0
+        while not found_link:
+            _search = search(_title, pag=pg);
+            rows = BeautifulSoup(_search.text).find_all("tr")[1:]
+            index = 0;
+            for row in rows:
+                dr = parse_row(row);
+                print(pretty_row(index, dr))
+                index += 1;
+            print("X|Next Page");
+            print("Y|Pass");
+            _link = input("Link: ")
+            if _link == "X":
+                pg += 1;
+                continue;
+            if _link == "Y":
+                break;
+            print(_link);
+            found_link = parse_row(rows[int(_link)])["Magnet"];
+		
+        if found_link:
+            webbrowser.open(found_link);
