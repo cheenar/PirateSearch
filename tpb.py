@@ -36,8 +36,8 @@ def handle_arguments():
 def build_query(query_title, sort_se=True, page=0):
     return _base_url + "/search/" + query_title.replace(" ", "%20") + "/" + str(page) + "/99/0";
 
-def search(query_title, pag=0):
-    raw = _session.get(build_query(query_title, page=pag), headers={"User-Agent":_user_agent});
+def search(query_title, pag=0, hdrs={"User-Agent":_user_agent}):
+    raw = _session.get(build_query(query_title, page=pag), headers=hdrs);
     return raw;
 
 def soup_san(soup):
